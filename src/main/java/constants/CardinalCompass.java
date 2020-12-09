@@ -21,7 +21,7 @@ public enum CardinalCompass {
                 return cardinalCompass.rightDirection;
             }
         }
-        return null;
+        return direction;
     }
 
     public String getLeft(String direction){
@@ -30,7 +30,7 @@ public enum CardinalCompass {
                 return cardinalCompass.leftDirection;
             }
         }
-        return null;
+        return direction;
     }
 
 }
