@@ -28,6 +28,7 @@ Output: The output for each rover should be its final co-ordinates and heading.
 Input and Output
 
 Test Input: 
+
 5 5 
 
 1 2 N 
@@ -43,3 +44,28 @@ Expected Output:
 1 3 N 
 
 5 1 E
+
+
+
+Soru Yorumlarım;
+
+
+Aracın bulunduğu nokta x y düzlemindedir. X, Y Lokasyonunu, four cardinal compass points ile de pozisyonunu temsil eder.
+
+0,0,N -> x=0, y=0 yönü de Kuzey e doğru olduğu anlaşılmalı,
+
+Aracı String serisi ile kontrol edeceğiz, gideceği iki yön var Left, Right. Aracın baktığı yöne göre left ve right, sol ve sağında kalır.
+
+Her bir L ve R harfi aracı 90 derece döndürür. Yönü N olan arac 90 derece sola dönerse yönü W olur.
+
+String dizisi içinde L ve R yönünü, M ise bulunduğu yönden 1 birim ilerlemesi gerektiğini belirtir. Her bir M, +1 anlamına gelir
+
+
+Input Yorumlama:
+
+ilk satır, arazının xy kordinatlarını verir. Sağ üst kordinati ilk satır olarak alırız. sol alt kordinat her zaman 0,0 dır.
+
+ikinci satır baslangıc noktaları ve baktığı yönü belirtir.
+
+üçüncü satır ise hareket edeceği yönü belirten string dizisidir.
+
