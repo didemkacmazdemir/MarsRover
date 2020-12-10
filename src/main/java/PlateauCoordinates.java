@@ -21,6 +21,9 @@ public class PlateauCoordinates {
             command = command.toUpperCase();
             facing = facing.toUpperCase();
 
+            //remove whitespaces
+            command = command.replaceAll("\\s", "");
+
             for(char c : command.toCharArray()){
                 if(c == PleateauConstants.Right){
                     facing = cardinalCompass.getRight(facing); //turning right

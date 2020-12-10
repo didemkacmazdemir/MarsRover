@@ -19,12 +19,18 @@ public class PlateauCoordinatesTest {
     }
 
     @Test
+    public void whiteSpaceTest() throws EmptyInputException {
+        assertThat(PlateauCoordinates
+                .moveRover("LML MLML MM", 1,2, PleateauConstants.North,5,5), is("1 3 N"));
+    }
+
+    @Test
     public void upperCaseTest() throws EmptyInputException {
         assertThat(PlateauCoordinates
                 .moveRover("LmLMlMLmm", 1,2, PleateauConstants.North,5,5), is("1 3 N"));
 
         assertThat(PlateauCoordinates
-                .moveRover("LmLMlMLmm", 1,2, "n",5,5), is("1 3 N"));
+                .moveRover("LMLMLMLMM", 1,2, "n",5,5), is("1 3 N"));
     }
 
     @Test
